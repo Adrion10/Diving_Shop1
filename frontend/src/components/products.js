@@ -1,88 +1,204 @@
 const products = [
   {
-    _id: "1",
-    name: "Iphone xs",
-    image:
-      "https://images.pexels.com/photos/7742555/pexels-photo-7742555.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-
-    description: "This is the best phone ever",
-    brand: "apple",
-    category: "mobile",
-    price: 1000,
-    countInStock: 10,
+    name: "Buoyance Control Device – BCD",
+    price: 499.99,
+    description: "A great way to dive into the ocean",
     rating: 4.5,
+    images: [
+      {
+        public_id: "products/images/mares_diving_BCD.jpg",
+        url: " /images/divingBCD/mares_diving_BCD.jpg",
+      },
+      {
+        public_id: "products/images/scubapro_diving_BCD.jpg",
+        url: " /images/divingBCD/scubapro_diving_BCD.jpg",
+      },
+      {
+        public_id: "products/images/sherwood_diving_BCD.jpg",
+        url: " /images/divingBCD/sherwood_diving_BCD.jpg",
+      },
+      {
+        public_id: "products/images/gressi_diving_BCD.jpg",
+        url: " /images/divingBCD/gressi_diving_BCD.jpg",
+      },
+    ],
+    category: "Diving_BCD",
+    seller: "Ebay",
+    stock: 10,
+    numReviews: 62,
+    reviews: [],
+  },
+  {
+    name: "diving_suits",
+    price: 249.99,
+    description: "A great way to dive into the ocean",
+    rating: 4.5,
+    images: [
+      {
+        public_id: "/images/suits/gressi_diving_suit.jpg",
+        url: " /images/suits/gressi_diving_suit.jpg",
+      },
+      {
+        public_id: "/images/suits/lycra_diving_suit.jpg",
+        url: " /images/suits/lycra_diving_suit.jpg",
+      },
+      {
+        public_id: "/images/suits/mares_diving_suit.jpg",
+        url: " /images/suits/mares_diving_suit.jpg",
+      },
+      {
+        public_id: "/images/suits/scubapro_diving_suit.jpg",
+        url: " /images/suits/scubapro_diving_suit.jpg",
+      },
+    ],
+    category: "Suits",
+    seller: "Ebay",
+    stock: 10,
+    numReviews: 62,
+    reviews: [],
+  },
+  {
+    name: "Scuba Regulators",
+    price: 649.99,
+    description: "A great way to dive into the ocean",
+    rating: 4.5,
+    images: [
+      {
+        public_id: "/images/regulators/mares_diving_regulators.jpg",
+        url: " /images/regulators/mares_diving_regulators.jpg",
+      },
+      {
+        public_id: "/images/regulators/sherwood_diving_regulators.jpg",
+        url: " /images/regulators/Sherwood_diving_regulators.jpg",
+      },
+      {
+        public_id: "/images/regulators/scubapro_diving_regulators.jpg",
+        url: " /images/regulators/scubapro_diving_regulators.jpg",
+      },
+      {
+        public_id: "/images/regulators/tusa_diving_regulators.jpg",
+        url: " /images/regulators/tusa_diving_regulators.jpg",
+      },
+    ],
+    category: "Regulators",
+    seller: "Ebay",
+    stock: 10,
+    numReviews: 62,
+    reviews: [],
+  },
+  {
+    name: "Diving Tank",
+    price: 299.99,
+    description: "A great way to dive into the ocean",
+    rating: 4.5,
+    images: [
+      {
+        public_id: "/images/diving_tank.webp ",
+        url: "/images/diving_tank.webp ",
+      },
+    ],
+    category: "Diving Tank",
+    seller: "Ebay",
+    stock: 10,
+    numReviews: 6,
+    reviews: [],
+  },
+
+  {
+    name: "Diving Mask",
+    price: 49.99,
+    description: "A great way to dive into the ocean",
+    rating: 4.5,
+    images: [
+      {
+        public_id: "  /images/divingMask/fullface_diving_mask.jpg",
+        url: "  /images/divingMask/fullface_diving_mask.jpg",
+      },
+      {
+        public_id: " /images/divingMask/gressi_diving_mask.jpg",
+        url: "  /images/divingMask/gressi_diving_mask.jpg",
+      },
+      {
+        public_id: " /images/divingMask/mares_diving_mask.jpg",
+        url: "  /images/divingMask/mares_diving_mask.jpg",
+      },
+      {
+        public_id: " /images/divingMask/scubapro_diving_mask.jpg",
+        url: "  /images/divingMask/scubapro_diving_mask.jpg",
+      },
+    ],
+    category: "Masks",
+    seller: "Ebay",
+    stock: 10,
     numReviews: 12,
+    reviews: [],
   },
   {
-    _id: "2",
-    name: "iPhone",
-    image:
-      "https://images.pexels.com/photos/4071887/pexels-photo-4071887.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-
-    description: "This is the best phone ever",
-    brand: "apple",
-    category: "mobile",
-    price: 1200,
-    countInStock: 10,
-    rating: 4.0,
-    numReviews: 8,
+    name: "Fins",
+    price: 69.99,
+    description: "A great way to dive into the ocean",
+    rating: 4.5,
+    images: [
+      {
+        public_id: " /images/fins/aqualung_diving_fins.jpg",
+        url: " /images/fins/aqualung_diving_fins.jpg",
+      },
+      {
+        public_id: " /images/fins/gressi_diving_fins.jpg",
+        url: "  /images/fins/gressi_diving_fins.jpg",
+      },
+      {
+        public_id: " /images/fins/scubapro_diving_fins.jpg",
+        url: "  /images/fins/scubapro_diving_fins.jpg",
+      },
+    ],
+    category: "Accessories",
+    seller: "Ebay",
+    stock: 10,
+    numReviews: 2,
+    reviews: [],
   },
   {
-    _id: "3",
-    name: "iPhone 12 Pro",
-    image:
-      "https://images.unsplash.com/photo-1608547492806-7e6c70ffdea4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-
-    description: "This is the best phone ever",
-    brand: "apple",
-    category: "mobile",
-    price: 1300,
-    countInStock: 10,
-    rating: 3,
-    numReviews: 12,
+    name: "Dive Computer",
+    price: 399.99,
+    description: "A great way to dive into the ocean",
+    rating: 4.5,
+    images: [
+      {
+        public_id: " /images/diveCompiuter/aqualung_dive_compiuter.jpeg",
+        url: " /images/diveCompiuter/aqualung_dive_compiuter.jpeg",
+      },
+      {
+        public_id: " /images/diveCompiuter/oqanic_dive_compiuter.jpg",
+        url: " /images/diveCompiuter/oqanic_dive_compiuter.jpg",
+      },
+      {
+        public_id: " /images/diveCompiuter/shearwater_dive_compiuter.jpg",
+        url: " /images/diveCompiuter/shearwater_dive_compiuter.jpg",
+      },
+    ],
+    category: "Accessories",
+    seller: "Ebay",
+    stock: 10,
+    numReviews: 9,
+    reviews: [],
   },
   {
-    _id: "4",
-    name: "Galaxy s21 plus",
-    image:
-      "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-
-    description: "This is the best phone ever",
-    brand: "apple",
-    category: "mobile",
-    price: 900,
-    countInStock: 10,
-    rating: 3.5,
-    numReviews: 10,
-  },
-  {
-    _id: "5",
-    name: "Samsung node 11",
-    image:
-      "https://images.pexels.com/photos/50614/pexels-photo-50614.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-
-    description: "This is the best phone ever",
-    brand: "apple",
-    category: "mobile",
-    price: 1500,
-    countInStock: 10,
-    rating: 4.0,
-    numReviews: 15,
-  },
-
-  {
-    _id: "6",
-    name: "Samsung s20 pro",
-    image:
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
-
-    description: "This is the best phone ever",
-    brand: "apple",
-    category: "mobile",
-    price: 1100,
-    countInStock: 10,
-    rating: 5,
-    numReviews: 23,
+    name: "Dive Compasses",
+    price: 99.99,
+    description: "A great way to dive into the ocean",
+    rating: 4.5,
+    images: [
+      {
+        public_id: " /images/dive_compasses.jpg",
+        url: " /images/dive_compasses.jpg",
+      },
+    ],
+    category: "Accessories",
+    seller: "Ebay",
+    stock: 10,
+    numReviews: 9,
+    reviews: [],
   },
 ];
 
