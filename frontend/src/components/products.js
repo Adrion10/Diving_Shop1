@@ -1,5 +1,6 @@
 const products = [
   {
+    _id: 1,
     name: "Buoyance Control Device – BCD",
     price: 499.99,
     description: "A great way to dive into the ocean",
@@ -12,6 +13,7 @@ const products = [
     reviews: [],
   },
   {
+    _id: 2,
     name: "diving_suits",
     price: 249.99,
     description: "A great way to dive into the ocean",
@@ -24,6 +26,7 @@ const products = [
     reviews: [],
   },
   {
+    _id: 3,
     name: "Scuba Regulators",
     price: 649.99,
     description: "A great way to dive into the ocean",
@@ -36,6 +39,7 @@ const products = [
     reviews: [],
   },
   {
+    _id: 4,
     name: "Diving Tank",
     price: 299.99,
     description: "A great way to dive into the ocean",
@@ -54,6 +58,7 @@ const products = [
   },
 
   {
+    _id: 5,
     name: "Diving Mask",
     price: 49.99,
     description: "A great way to dive into the ocean",
@@ -66,6 +71,7 @@ const products = [
     reviews: [],
   },
   {
+    _id: 6,
     name: "Fins",
     price: 69.99,
     description: "A great way to dive into the ocean",
@@ -78,6 +84,7 @@ const products = [
     reviews: [],
   },
   {
+    _id: 7,
     name: "Dive Computer",
     price: 399.99,
     description: "A great way to dive into the ocean",
@@ -91,6 +98,7 @@ const products = [
     reviews: [],
   },
   {
+    _id: 8,
     name: "Dive Compasses",
     price: 99.99,
     description: "A great way to dive into the ocean",
