@@ -15,7 +15,7 @@ const products = [
     name: "diving_suits",
     price: 249.99,
     description: "A great way to dive into the ocean",
-    rating: 4.5,
+    rating: 5.0,
     image: "/images/suits/gressi_diving_suit.jpg",
     category: "Suits",
     seller: "Ebay",
