@@ -1,6 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
+import {
+  Row,
+  Col,
+  Image,
+  ListGroup,
+  Card,
+  Button,
+  ListGroupItem,
+} from "react-bootstrap";
 import Rating from "../components/Rating";
 import products from "../products";
 const ProductScreen = ({ match }) => {
@@ -16,7 +24,12 @@ const ProductScreen = ({ match }) => {
           <Image src={product.image} fluid alt={product.name} />
         </Col>
         <Col md={3}>
-          <ListGroup variant> </ListGroup>
+          <ListGroup variant="flush">
+            <ListGroupItem>
+              {" "}
+              <h3>{product.name}</h3>{" "}
+            </ListGroupItem>
+          </ListGroup>
         </Col>
       </Row>
     </>
