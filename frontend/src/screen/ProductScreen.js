@@ -12,7 +12,7 @@ import {
 import Rating from "../components/Rating";
 import products from "../products";
 const ProductScreen = ({ match }) => {
-  const product = products.find((product) => product.id === match.params.id);
+  const product = products.find((p) => p._id === match.params.id);
 
   return (
     <>
