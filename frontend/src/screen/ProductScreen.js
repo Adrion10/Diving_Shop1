@@ -39,6 +39,37 @@ const ProductScreen = ({ match }) => {
             </ListGroup.Item>
             <ListGroup.Item>Description: {product.description}</ListGroup.Item>
           </ListGroup>
+          <Col md={3}>
+            <Card>
+              <ListGroup varianat="flush">
+                <ListGroupItem>
+                  <Row>
+                    <Col>Price:</Col>
+                    <Col>
+                      <strong>€{product.price}</strong>
+                    </Col>
+                  </Row>
+                </ListGroupItem>
+                <ListGroupItem>
+                  <Row>
+                    <Col>Status:</Col>
+                    <Col>
+                      {products.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                    </Col>
+                  </Row>
+                </ListGroupItem>
+                <ListGroupItem>
+                  <Button
+                    className="btn-block"
+                    type="button"
+                    disabled={products.countInStock === 0}
+                  >
+                    Add to Card
+                  </Button>
+                </ListGroupItem>
+              </ListGroup>
+            </Card>
+          </Col>
         </Col>
       </Row>
     </>
