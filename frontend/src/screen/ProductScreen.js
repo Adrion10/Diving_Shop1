@@ -6,7 +6,21 @@ import products from "../products";
 const ProductScreen = ({ match }) => {
   const product = products.find((product) => product.id === match.params.id);
 
-  return <div>{product.name}</div>;
+  return (
+    <>
+      <Link className="btn btn-dark my-3" to="/">
+        Go Back
+      </Link>
+      <Row>
+        <Col md={6}>
+          <Image src={product.image} fluid alt={product.name} />
+        </Col>
+        <Col md={3}>
+          <ListGroup variant> </ListGroup>
+        </Col>
+      </Row>
+    </>
+  );
 };
 
 export default ProductScreen;
