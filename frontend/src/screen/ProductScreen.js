@@ -1,17 +1,11 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import {
-  Row,
-  Col,
-  Image,
-  ListGroup,
-  Card,
-  Button,
-  ListGroupItem,
-} from "react-bootstrap";
+import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating";
 import products from "../products";
 const ProductScreen = ({ match }) => {
+  const { id } = useParams();
   const product = products.find((p) => p._id === match.params.id);
 
   return (
@@ -42,23 +36,23 @@ const ProductScreen = ({ match }) => {
           <Col md={3}>
             <Card>
               <ListGroup varianat="flush">
-                <ListGroupItem>
+                <ListGroup.Item>
                   <Row>
                     <Col>Price:</Col>
                     <Col>
                       <strong>€{product.price}</strong>
                     </Col>
                   </Row>
-                </ListGroupItem>
-                <ListGroupItem>
+                </ListGroup.Item>
+                <ListGroup.Item>
                   <Row>
                     <Col>Status:</Col>
                     <Col>
                       {products.countInStock > 0 ? "In Stock" : "Out of Stock"}
                     </Col>
                   </Row>
-                </ListGroupItem>
-                <ListGroupItem>
+                </ListGroup.Item>
+                <ListGroup.Item>
                   <Button
                     className="btn-block"
                     type="button"
@@ -66,7 +60,7 @@ const ProductScreen = ({ match }) => {
                   >
                     Add to Card
                   </Button>
-                </ListGroupItem>
+                </ListGroup.Item>
               </ListGroup>
             </Card>
           </Col>
