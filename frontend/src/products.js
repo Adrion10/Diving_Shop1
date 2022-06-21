@@ -44,12 +44,7 @@ const products = [
     price: 299.99,
     description: "A great way to dive into the ocean",
     rating: 3.5,
-    images: [
-      {
-        public_id: "/images/diving_tank.webp ",
-        url: "/images/diving_tank.webp ",
-      },
-    ],
+    image: "/images/diving_tank.jpg ",
     category: "Diving Tank",
     seller: "Ebay",
     stock: 10,
@@ -89,8 +84,7 @@ const products = [
     price: 399.99,
     description: "A great way to dive into the ocean",
     rating: 3.5,
-    image: "/images/diveCompiuter/aqualung_dive_compiuter.jpeg",
-
+    image: "/images/diveCompiuter/aqualung_dive_compiuter.jpg",
     category: "Accessories",
     seller: "Ebay",
     stock: 10,

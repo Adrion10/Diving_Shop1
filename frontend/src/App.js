@@ -12,10 +12,8 @@ const App = () => {
       <main className="py-3">
         <Container>
           <h1>Diving Shop</h1>
-
           <Route path="/" component={HomeScreen} exact />
           <Route path="/product/:id" component={ProductScreen} />
-
           <HomeScreen />
         </Container>
       </main>
