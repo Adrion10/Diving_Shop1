@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 
 const ProductScreen = () => {
   const { id } = useParams();
-  const product = products.find((p) => p._id === Number(id));
+  const product = products.find((product) => product._id === Number(id));
 
   return (
     <>
@@ -35,37 +35,37 @@ const ProductScreen = () => {
             </ListGroup.Item>
             <ListGroup.Item>Description: {product.description}</ListGroup.Item>
           </ListGroup>
-          <Col md={3}>
-            <Card>
-              <ListGroup varianat="flush">
-                <ListGroup.Item>
-                  <Row>
-                    <Col>Price:</Col>
-                    <Col>
-                      <strong>€{product.price}</strong>
-                    </Col>
-                  </Row>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <Row>
-                    <Col>Status:</Col>
-                    <Col>
-                      {products.countInStock > 0 ? "In Stock" : "Out of Stock"}
-                    </Col>
-                  </Row>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <Button
-                    className="btn-block"
-                    type="button"
-                    disabled={products.countInStock === 0}
-                  >
-                    Add to Card
-                  </Button>
-                </ListGroup.Item>
-              </ListGroup>
-            </Card>
-          </Col>
+        </Col>
+        <Col md={3}>
+          <Card>
+            <ListGroup varianat="flush">
+              <ListGroup.Item>
+                <Row>
+                  <Col>Price:</Col>
+                  <Col>
+                    <strong>€{product.price}</strong>
+                  </Col>
+                </Row>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Row>
+                  <Col>Status:</Col>
+                  <Col>
+                    {products.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                  </Col>
+                </Row>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Button
+                  className="btn-block"
+                  type="button"
+                  disabled={products.countInStock === 0}
+                >
+                  Add to Card
+                </Button>
+              </ListGroup.Item>
+            </ListGroup>
+          </Card>
         </Col>
       </Row>
     </>

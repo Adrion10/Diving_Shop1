@@ -1,0 +1,23 @@
+{
+  "name": "diving_shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adrion10/Diving_Shop1.git"
+  },
+  "keywords": [],
+  "author": "Lace Hilaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adrion10/Diving_Shop1/issues"
+  },
+  "homepage": "https://github.com/Adrion10/Diving_Shop1#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
