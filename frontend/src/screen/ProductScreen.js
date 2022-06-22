@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating";
 import products from "../products";
+import { useParams } from "react-router-dom";
 
-const ProductScreen = ({ match }) => {
-  const product = products.find((p) => p._id === match.params.id);
+const ProductScreen = () => {
+  const { id } = useParams();
+  const product = products.find((p) => p._id === Number(id));
 
   return (
     <>
@@ -15,7 +17,7 @@ const ProductScreen = ({ match }) => {
       </Link>
       <Row>
         <Col md={6}>
-          <Image src={product.image} fluid alt={product.name} />
+          <Image src={product.image} alt={product.name} fluid />
         </Col>
         <Col md={3}>
           <ListGroup variant="flush">
