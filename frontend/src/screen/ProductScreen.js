@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
+import axios from "axios";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating";
 
 import { useParams } from "react-router-dom";
 
-const ProductScreen = () => {
-  const [product setProduct] = useState({})
-  
+const ProductScreen = ({ match }) => {
+  const [product, setProduct] = useState({});
+
   useEffect(() => {
-    const fetchProducts = async () => {
-      const { data } = await axios.get("/api/products");
-      setProducts(data);
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/ ${match.params.id}`);
+      setProduct(data);
     };
-    fetchProducts();
+    fetchProduct();
   }, []);
-
-
 
   return (
     <>
@@ -60,7 +59,7 @@ const ProductScreen = () => {
                 <Row>
                   <Col>Status:</Col>
                   <Col>
-                    {products.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                    {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
                   </Col>
                 </Row>
               </ListGroup.Item>
@@ -68,7 +67,7 @@ const ProductScreen = () => {
                 <Button
                   className="btn-block"
                   type="button"
-                  disabled={products.countInStock === 0}
+                  disabled={product.countInStock === 0}
                 >
                   Add to Card
                 </Button>
