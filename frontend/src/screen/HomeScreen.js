@@ -6,6 +6,7 @@ import { Row, Col } from "react-bootstrap";
 
 const HomeScreen = () => {
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     const fetchProducts = async () => {
       const { data } = await axios.get("/api/products");
