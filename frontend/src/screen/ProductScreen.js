@@ -7,7 +7,7 @@ import Rating from "../components/Rating";
 
 import { useParams } from "react-router-dom";
 
-const ProductScreen = () => {
+const ProductScreen = ({ match }) => {
   const [product, setProduct] = useState({});
   const { id } = useParams;
 
@@ -17,7 +17,7 @@ const ProductScreen = () => {
       setProduct(data);
     };
     fetchProduct();
-  }, [id]);
+  }, [match]);
 
   return (
     <>
