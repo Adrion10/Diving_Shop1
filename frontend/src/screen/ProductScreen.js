@@ -7,16 +7,17 @@ import Rating from "../components/Rating";
 
 import { useParams } from "react-router-dom";
 
-const ProductScreen = ({ match }) => {
+const ProductScreen = () => {
   const [product, setProduct] = useState({});
+  const { id } = useParams;
 
   useEffect(() => {
     const fetchProduct = async () => {
-      const { data } = await axios.get(`/api/products/ ${match.params.id}`);
+      const { data } = await axios.get(`/api/products/ ${id}`);
       setProduct(data);
     };
     fetchProduct();
-  }, []);
+  }, [id]);
 
   return (
     <>
