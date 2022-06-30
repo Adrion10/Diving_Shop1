@@ -1,9 +1,12 @@
 const express = require("express");
-const app = express();
+
 const dotenv = require("dotenv");
 const products = require("./data/products");
+const connectDB = require("./config/db");
 
 dotenv.config();
+connectDB();
+const app = express();
 
 app.get("/", (req, res) => {
   res.send("API is Running");
