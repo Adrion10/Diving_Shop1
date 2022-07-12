@@ -3,6 +3,9 @@ const router = express.Router;
 const Product = require("../models/productModel");
 const asyncHandler = require("express-async-handler");
 
+
+//@desc  Fetch all data 
+// @router Get /api
 router.get("/", asyncHandler(async (req, res) => {
   const products = await Product.find({});
   res.json(products);
