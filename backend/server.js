@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const colors = require("colors");
 const products = require("./data/products");
 const connectDB = require("./config/db");
+const { productRoutes } = require("./router/productRouter");
 
 dotenv.config();
 connectDB();
@@ -12,13 +13,8 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("API is Running");
 });
-app.get("/api/products", (req, res) => {
-  res.json(products);
-});
-app.get("/api/products/:id", (req, res) => {
-  const product = products.find((p) => p._id === req.params.id);
-  res.json(product);
-});
+app.use("/api/products", productRoutes);
+
 const PORT = process.env.PORT || 4000;
 
 app.listen(
